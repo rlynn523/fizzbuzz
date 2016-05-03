@@ -1,16 +1,13 @@
 $(document).ready(function(){
 	for (var i = 1; i < 101; i++) {
-		console.log(i)
-		$('.fizzbuzz').append('<li> '+i+' </li>'); {
-			if ((i % 3 === 0 && i % 5 === 0)) {
-				console.log('fizzbuzz');
-			}
-			else if ( i % 3 === 0) { 
-				console.log('fizz');
-			}
-			else if ((i % 5 === 0)) {
-				console.log('buzz');
-			}
+		if ((i % 3 === 0 && i % 5 === 0)) {
+			$('.fizzbuzz').append('<li> fizzbuzz </li>');
+		} else if ( i % 3 === 0) { 
+			$('.fizzbuzz').append('<li> fizz </li>');
+		} else if (i % 5 === 0) {
+			$('.fizzbuzz').append('<li> buzz </li>');
+		} else {
+			$('.fizzbuzz').append('<li> '+i+' </li>');
 		}
 	}
 });
