@@ -14,7 +14,7 @@ $(document).ready(function(){
 
 	function fizzBuzz(input){ 
 		for (var i = 1; i <= input; i++) {
-			var output = ['fizzbuzz','fizz', 'buzz', i];
+			var output;
 			if ((i % 3 === 0 && i % 5 === 0)) {
 				output = 'fizzbuzz';
 			} else if (i % 3 === 0) { 
