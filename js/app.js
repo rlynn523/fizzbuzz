@@ -1,14 +1,17 @@
 $(document).ready(function(){
 	function getInput(){
-		var input = parseInt(prompt("Please enter a number in the box below") || 0);
-		if (input === 0) {
-			console.log('input');
-			return;
-		} else if (isNaN(input)) {
-			alert("Not a number!");
-			getInput();
-		} else { 
-			fizzBuzz(input);
+		var input = prompt("Please enter a number in the box below");
+		if (input !== null) {
+			input = parseInt(input);
+			if (input === 0) {
+				console.log('input');
+				return;
+			} else if (isNaN(input)) {
+				alert("Not a number!");
+				getInput();
+			} else { 
+				fizzBuzz(input);
+			}
 		}
 	}
 	function appBuzz(output) {
