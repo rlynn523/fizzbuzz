@@ -11,13 +11,12 @@ $(document).ready(function(){
 			fizzBuzz(input);
 		}
 	}
+	function appBuzz(output) {
+				$('.fizzbuzz').append('<li>'+ output +'</li>');
+			}
 	function fizzBuzz(input){ 
 		for (var i = 1; i <= input; i++) {
-			var output = ['<li> fizzbuzz </li>','<li> fizz </li>', '<li> buzz </li>','<li> '+i+' </li>']
-			function appBuzz(output) {
-				$('.fizzbuzz').append(output);
-				console.log(output);
-			}
+			var output = ['fizzbuzz','fizz', 'buzz', i]
 			if ((i % 3 === 0 && i % 5 === 0)) {
 				appBuzz(output[0]);
 			} else if (i % 3 === 0) { 
